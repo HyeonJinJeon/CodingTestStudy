@@ -2,7 +2,7 @@ n, m, k = map(int, input().split())
 
 data = list(map(int, input().split()))
 
-data.sort()
+data.sort() #sort로 data 정렬
 maxNum = data[n-1] #가장 큰수
 secNum = data[n-2] #두 번째로 큰수
 result = 0
