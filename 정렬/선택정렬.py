@@ -7,6 +7,6 @@ for i in range(len(arr)) :
     for j in range(i+1, len(arr)) :
         if arr[min_index] > arr[j] :
             min_index = j
-    arr[i], arr[min_index] = arr[min_index], arr[i] #가장 작은 값과 스와프
+    arr[i], arr[min_index] = arr[min_index], arr[i] #가장 작은 값과 스와프 / 다른 언어에 비해 스와프가 편함
 
 print(arr)
