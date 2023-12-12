@@ -8,5 +8,5 @@ for i in range(n) :
     arr.append((data[0], int(data[1])))
 
 arr = sorted(arr, key= lambda student: student[1])
-for student in arr :
+for student in arr : #[student,student,student,...,student]    student의 예시 => (홍길동, 95)
     print(student[0], end=' ')
