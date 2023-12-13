@@ -6,17 +6,19 @@ exist = list(map(int, input().split()))
 m = int(input())
 call = list(map(int, input().split()))
 
-def binary_search(arr, target, start, end) :
-    if start > end:
-        return None
+exist.sort()
+call.sort()
 
-    mid = (start + end) // 2
+def binary_search(exist, target, start, end) :
+    while start <= end :
+        mid = (start + end) // 2
+        if exist[mid] == target :
+            return print("yes", end=" ")
+        elif exist[mid] > target :
+            end = mid - 1
+        else :
+            start = mid + 1
+    return print("no", end=" ")
 
-    if arr[mid] == target :
-        return mid
-
-    elif arr[mid] > target :
-        return binary_search(arr, target, start, mid - 1)
-
-    else :
-        return binary_search(arr, target, mid + 1, end)
+for j in range(m) :
+    binary_search(exist, call[j], 0, n-1)
